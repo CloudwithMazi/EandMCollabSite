@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Page Not Found - Mfon & Ekaete Training</title>
+
+    <style>
+
+        /* Basic Reset */
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+        }
+
+
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background-color: #f9f9f9;
+
+            color: #333;
+
+            scroll-behavior: smooth;
+
+        }
+
+
+
+        /* Navbar */
+
+        nav {
+
+            background: #35424a;
+
+            color: #fff;
+
+            padding: 15px 20px;
+
+            position: fixed;
+
+            width: 100%;
+
+            top: 0;
+
+            z-index: 1000;
+
+            transition: background 0.3s;
+
+        }
+
+
+
+        nav.scrolled {
+
+            background: #1f2a30;
+
+        }
+
+
+
+        nav .logo {
+
+            font-size: 1.5em;
+
+            display: inline-block;
+
+        }
+
+
+
+        nav .links {
+
+            float: right;
+
+        }
+
+
+
+        nav .links a {
+
+            color: #fff;
+
+            text-decoration: none;
+
+            margin-left: 20px;
+
+            transition: color 0.3s;
+
+        }
+
+
+
+        nav .links a:hover {
+
+            color: #e8491d;
+
+        }
+
+
+
+        /* Error Section */
+
+        .error-section {
+
+            height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            flex-direction: column;
+
+            text-align: center;
+
+            padding-top: 60px; /* Height of navbar */
+
+        }
+
+
+
+        .error-section h1 {
+
+            font-size: 5em;
+
+            margin-bottom: 20px;
+
+            color: #e8491d;
+
+            animation: fadeInDown 1s ease-out;
+
+        }
+
+
+
+        .error-section p {
+
+            font-size: 1.5em;
+
+            margin-bottom: 30px;
+
+            animation: fadeInUp 1s ease-out;
+
+        }
+
+
+
+        .error-section a {
+
+            background: #35424a;
+
+            color: #fff;
+
+            padding: 10px 20px;
+
+            text-decoration: none;
+
+            border-radius: 5px;
+
+            transition: background 0.3s;
+
+            animation: fadeInUp 1.2s ease-out;
+
+        }
+
+
+
+        .error-section a:hover {
+
+            background: #1f2a30;
+
+        }
+
+
+
+        /* Footer */
+
+        footer {
+
+            background: #35424a;
+
+            color: #fff;
+
+            text-align: center;
+
+            padding: 20px;
+
+            position: absolute;
+
+            width: 100%;
+
+            bottom: 0;
+
+        }
+
+
+
+        /* Animations */
+
+        @keyframes fadeInDown {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(-20px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+
+            }
+
+        }
+
+
+
+        @keyframes fadeInUp {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(20px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+
+            }
+
+        }
+
+
+
+        /* Responsive */
+
+        @media (max-width: 768px) {
+
+            .error-section h1 {
+
+                font-size: 3em;
+
+            }
+
+
+
+            nav .links {
+
+                float: none;
+
+                text-align: center;
+
+                margin-top: 10px;
+
+            }
+
+
+
+            nav .links a {
+
+                display: block;
+
+                margin: 10px 0;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <!-- Navigation -->
+
+    <nav id="navbar">
+
+        <span class="logo">Mfon & Ekaete</span>
+
+        <div class="links">
+
+            <a href="index.html">Home</a>
+
+            <a href="index.html#projects">Projects</a>
+
+            <a href="index.html#mentorship">Mentorship</a>
+
+            <a href="index.html#reviews">Reviews</a>
+
+            <a href="index.html#contact">Contact</a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- Error Section -->
+
+    <div class="error-section">
+
+        <h1>404</h1>
+
+        <p>Oops! The page you're looking for doesn't exist.</p>
+
+        <a href="index.html">Return to Home</a>
+
+    </div>
+
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>&copy; 2025 Mfon & Ekaete Training. All rights reserved.</p>
+
+    </footer>
+
+
+
+    <!-- JavaScript for Navbar Scroll Effect -->
+
+    <script>
+
+        // Change navbar background on scroll
+
+        window.addEventListener('scroll', () => {
+
+            const navbar = document.getElementById('navbar');
+
+            if (window.scrollY > 50) {
+
+                navbar.classList.add('scrolled');
+
+            } else {
+
+                navbar.classList.remove('scrolled');
+
+            }
+
+        });
+
+
+
+        // Initial check
+
+        window.dispatchEvent(new Event('scroll'));
+
+    </script>
+
+</body>
+
+</html>
